@@ -1,4 +1,4 @@
-
+import whoisUI as wui
 import csv, os, sys
 
 
@@ -22,7 +22,7 @@ def readCSV():
     address = []
 
 
-    with open(sys.argv[1] , 'r') as csv_file:
+    with open(wui.csvReadName_ent.get() , 'r') as csv_file:
         
         csv_reader_obj = csv.reader(csv_file, delimiter=',')
 
@@ -45,7 +45,7 @@ while(True):
     try:
     
         #fName = input('Enter the file name: ')
-        open(sys.argv[1], 'r')
+        open(wui.csvReadName_ent.get(), 'r')
         
         break
     
@@ -60,7 +60,7 @@ res = readCSV()
 
 
 
-with open(sys.argv[2] , 'w') as csv_file:
+with open(wui.csvWriteName_ent.get() , 'w') as csv_file:
     
     csv_writer_obj = csv.writer(csv_file)
 
@@ -117,38 +117,5 @@ with open(sys.argv[2] , 'w') as csv_file:
 
 
 
-
-
         # delete it
         #break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
